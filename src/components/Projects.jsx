@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Github, Brain, Coffee } from 'lucide-react';
+import { Github, Brain, Coffee, Database } from 'lucide-react';
 
 const Projects = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -20,8 +20,16 @@ const Projects = () => {
       tech: "Java, SQL, JDBC",
       description: "Backend order validation system with automated workflow, pricing, and MySQL integration for secure data management.",
       icon: <Coffee className="w-12 h-12 text-purple-500" />,
-      github: "https://github.com/elagosan/food-order-system",
+      github: "https://github.com/elagosan/Food_Order_Processing_System",
       tags: ["Java", "SQL", "JDBC"],
+    },
+    {
+      title: "Bank Database Management",
+      tech: "SQL, Database Design",
+      description: "Comprehensive relational database design and implementation for banking operations, featuring advanced ER modeling and optimized SQL queries.",
+      icon: <Database className="w-12 h-12 text-green-500" />,
+      github: "https://github.com/elagosan/Bank-database-management-",
+      tags: ["SQL", "MySQL", "DB Design"],
     },
   ];
 
