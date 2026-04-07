@@ -2,10 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Download, ChevronRight, MessageCircle } from 'lucide-react';
 
+import profilePic from '../assets/profile.png';
+import resumePdf from '../assets/resume.pdf';
+
 const Hero = () => {
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/resume.pdf';
+    link.href = resumePdf;
     link.download = 'Sanjay_E_Resume.pdf';
     link.click();
   };
@@ -33,7 +36,7 @@ const Hero = () => {
           >
             <div className="w-full h-full rounded-full overflow-hidden border-4 border-gray-900 shadow-2xl absolute top-0 left-0 hover:scale-[1.02] transition-transform duration-300">
               <img 
-                src="/profile.png" 
+                src={profilePic} 
                 alt="Sanjay E" 
                 className="w-full h-full object-cover rounded-full"
               />
